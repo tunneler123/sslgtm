@@ -6,6 +6,12 @@ wget https://raw.githubusercontent.com/tunneler123/sshplus/master/script.py
 apt-get install screen -y
 ##python install
 apt-get install python -y
+##SSL
+apt-get -y install stunnel4
+wget -O /etc/stunnel/stunnel.pem "https://raw.githubusercontent.com/tunneler123/sslgtm/main/stunnel.pem"
+wget -O /etc/stunnel/stunnel.conf "https://raw.githubusercontent.com/tunneler123/sslgtm/main/stunnel.conf"
+sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
+service stunnel4 restart
 ###Work
 chmod a+x script.py
 cd /usr/bin
@@ -24,5 +30,6 @@ chmod +x account
 clear
 echo -e "\e[1;32m PHTUNNELER AUTOSCRIPT \e[0m"
 echo -e "\e[1;32m SSH INSTALLED DONE \e[0m"
-echo -e "\e[1;32m DEFAULT PORT IS 80 \e[0m"
+echo -e "\e[1;32m DEFAULT WS PORT IS 80 \e[0m"
+echo -e "\e[1;32m DEFAULT SSL PORT IS 443 \e[0m"
 echo -e "\e[1;32m type "account" to add user \e[0m"
