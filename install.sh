@@ -7,7 +7,7 @@ apt-get install screen -y
 ##dropbearsetup
 apt-get install dropbear -y
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=422/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=442/g' /etc/default/dropbear
 service dropbear restart
 ##python install
 apt-get install python -y
