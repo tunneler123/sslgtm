@@ -1,7 +1,8 @@
 apt-get update
 apt-get upgrade -y
 ##Download script
-wget https://raw.githubusercontent.com/tunneler123/sshplus/master/script.py
+mkdir /etc/scripts/
+wget -O /etc/scripts/script.py https://raw.githubusercontent.com/tunneler123/sshplus/master/script.py
 ##Screen
 apt-get install screen -y
 ##dropbearsetup
@@ -23,7 +24,7 @@ cd /usr/bin
 wget -O account https://raw.githubusercontent.com/tunneler123/sshplus/master/account.sh
 screen -dmS screen python ./script.py
 cat <<EOF >>start
-screen -dmS screen python /root/script.py
+screen -dmS screen python /etc/scripts/script.py
 EOF
 cat <<EOF >>stop
 pkill python
