@@ -33,6 +33,7 @@ chmod +x start
 chmod +x stop
 chmod +x account
 ###TUNNELER###
+start
 clear
 echo -e "\e[1;32m PHTUNNELER AUTOSCRIPT \e[0m"
 echo -e "\e[1;32m SSH INSTALLED DONE \e[0m"
